@@ -14,6 +14,14 @@ int calculateProduct(int numbers[], int length) {
     }
     return product;
 }
+int* reverseArray(int numbers[], int size) {
+    int* reversed = new int[size];
+    for (int i = 0; i < size; i++) {
+        reversed[i] = numbers[size - 1 - i];
+    }
+    return reversed;
+}
+
 int main() {
     int size;
 
@@ -41,5 +49,12 @@ int main() {
     int product = calculateProduct(numbers, size);
     std::cout << "Product of numbers: " << product << std::endl;
 
+    int* reversedArray = reverseArray(numbers, size);
+    std::cout << "Reversed Array: ";
+    for (int i = 0; i < size; i++) {
+        std::cout << reversedArray[i] << " ";
+    }
+    std::cout << std::endl;
+    delete[] reversedArray;
     return 0;
 }
