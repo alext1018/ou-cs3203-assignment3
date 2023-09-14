@@ -1,5 +1,5 @@
 #include <iostream>
-
+// add two num
 int computeSum(int numbers[], int size) {
     int sum = 0;
     for (int i = 0; i < size; i++) {
@@ -7,6 +7,7 @@ int computeSum(int numbers[], int size) {
     }
     return sum;
 }
+// find product
 int calculateProduct(int numbers[], int length) {
     int product = 1;
     for (int i = 0; i < length; i++) {
@@ -14,6 +15,7 @@ int calculateProduct(int numbers[], int length) {
     }
     return product;
 }
+// reverse input
 int* reverseArray(int numbers[], int size) {
     int* reversed = new int[size];
     for (int i = 0; i < size; i++) {
@@ -24,7 +26,7 @@ int* reverseArray(int numbers[], int size) {
 
 int main() {
     int size;
-
+// user input
     std::cout << "Enter the size of the array: ";
     std::cin >> size;
 
@@ -41,14 +43,14 @@ int main() {
         std::cin >> numbers[i];
     }
 
-   
+   // cout
     int sum = computeSum(numbers, size);
     std::cout << "Sum of numbers: " << sum << std::endl;
 
-
+// cout
     int product = calculateProduct(numbers, size);
     std::cout << "Product of numbers: " << product << std::endl;
-
+//cout
     int* reversedArray = reverseArray(numbers, size);
     std::cout << "Reversed Array: ";
     for (int i = 0; i < size; i++) {
